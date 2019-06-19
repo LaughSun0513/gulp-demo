@@ -3,7 +3,9 @@
 ### gulp的安装
 
 `npm i gulp -g` 全局安装
+
 `npm i gulp gulp-babel gulp-concat gulp-uglify -D` 本地安装
+
 `npm i @babel/core @babel/preset-env -D` 安装babel核心库 & 预设
 
 ### 配置gulpfile.js && 压缩js
@@ -49,6 +51,6 @@ gulp.task('style',()=>{
 gulp.task('default',gulp.series('style'));
 ```
 
-### 压出来来的js 为1.min.js 2.min.js 或 1.css 2.css(即源文件叫什么名字，压缩出来就是什么)
+### 预期压出来的js 为1.min.js 2.min.js 或 1.css 2.css(即源文件叫什么名字，压缩出来就是什么)
 注释 // .pipe(concat('bundle.js'))
 添加上 .pipe(rename({suffix: '.min'}))
